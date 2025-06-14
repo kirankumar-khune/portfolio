@@ -156,7 +156,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
+//..........................................................................................................//
+// off developer tool
+// f12 button 
 document.addEventListener('keydown', function(e) {
     
     if (e.key === 'F12') {
@@ -164,6 +166,17 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+// inspect element right click
+
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
 });
+
+
+//ctrl + shift + i
+document.addEventListener('keydown', function(e) {
+    if ((e.metaKey) && e.shiftKey && e.key === 'I') {
+    }
+});
+
+//..................................................................................................................//
