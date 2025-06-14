@@ -175,8 +175,13 @@ document.addEventListener('contextmenu', function(e) {
 
 //ctrl + shift + i
 document.addEventListener('keydown', function(e) {
-    if ((e.metaKey) && e.shiftKey && e.key === 'I') {
-    }
+    // For Windows/Linux (Ctrl) and Mac (Meta/Cmd)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
+        console.log('Ctrl+Shift+I or Cmd+Shift+I was pressed!');
+        e.preventDefault(); // optional: prevent browser default DevTools opening
+        // Your custom code here
+    }
 });
+
 
 //..................................................................................................................//
